@@ -20,6 +20,18 @@
     background-color: $blue;
     background-image: linear-gradient($purple, $blue);
 
+    @include tablet{
+        padding-inline-start: 30px;
+        padding-inline-end: 30px;
+        height: 100px;
+    }
+
+    @include desktop{
+        padding-inline-start: 180px;
+        padding-inline-end: 180px;
+        height: 80px;
+    }
+
     &__logo{
         margin: 0;
         color: white;
@@ -27,8 +39,77 @@
     }
 
     &__menu-icon{
+
         @include tablet{
             display: none;
         }
     }   
+
+    &__nav-items{
+        display: none;
+        position: absolute;
+        list-style-type: none;
+        padding: 0;
+        background-color: $blue;
+        top: 64px;
+        right: 0;
+        left: 0;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @keyframes mobile-nav{
+            from{
+                height: 0;
+            }
+            to{
+                height: 100vh;
+            }
+        }
+
+        animation-name: mobile-nav;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+
+        @include tablet{
+            position: initial;
+            display: flex;
+            list-style-type: none;
+            animation-name: none;
+            background-color: initial;
+            flex-direction: row;
+            margin-bottom: 0;
+        }
+    }
+
+    &__nav-item{
+        margin-bottom: 24px;
+
+        @include tablet{
+            margin-left: 16px;
+        }
+    }
+
+    &__nav-link{
+        color: white;
+        text-decoration: none;
+
+        &:hover{
+            @keyframes color-shift {
+                from {
+                    color: white;
+                }
+                to{
+                    color: $honey-mustard;
+                    
+                }
+            }
+            animation-name: color-shift;
+            animation-duration: .3s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: both;
+            border-bottom: 2px solid $honey-mustard;
+        }
+    }
 }
