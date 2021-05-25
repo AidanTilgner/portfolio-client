@@ -1,0 +1,35 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/typography' as *;
+@use '../../partials/variables' as *;
+
+.contactPage{
+    padding-block-start: 80px;
+    padding-block-end: 36px;
+    background-image: linear-gradient($blue, $blue, $purple);
+    @include default-padding;
+
+    &__tagline{
+        color: white;
+        font-size: 48px;
+
+        @include tablet{
+            font-size: 72px;
+        }
+    }
+
+    &__subheader{
+        color: white;
+        font-size: 36px;
+        margin-top: 56px
+    }
+
+    &__button-filled{
+        @include button-filled;
+    }
+
+    &__info{
+        color: white;
+        font-size: 24px;
+        font-weight: 600;
+    }
+}

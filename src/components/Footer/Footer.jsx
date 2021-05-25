@@ -10,10 +10,16 @@ import github from '../../assets/icons/github.png';
 //files
 import './Footer.scss';
 
-function Footer() {
+function Footer({ active }) {
     return (
-        <div className="footer">
-            <h3 className="footer__title">My Social</h3>
+        <div 
+            className="footer"
+            style={{
+                backgroundImage: active === "contact" && "none",
+                backgroundColor: active === "contact" && "#6440E3",
+            }}
+        >
+            <h3 className="footer__title">my social</h3>
             <div className="footer__social-icons">
                 <a href="https://www.linkedin.com/in/aidan-tilgner-0a4a31157/" target="_blank">
                     <img src={linkedin} alt="linkedin" className="footer__icon"/>

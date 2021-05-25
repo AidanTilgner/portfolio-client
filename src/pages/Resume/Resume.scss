@@ -9,7 +9,7 @@
     height: calc(100vh - 80px);
 
     @include tablet{
-        height: calc(100vh - 100px);
+        height: calc(100vh - 80px);
     }
 
     @include desktop{
@@ -41,7 +41,6 @@
         margin-top: 24px;
 
         @include tablet{
-            margin-top: 56px;
         }
     }
 }
