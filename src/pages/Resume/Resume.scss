@@ -1,0 +1,47 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/typography' as *;
+@use '../../partials/variables' as *;
+
+.resume{
+    padding-block-start: 80px;
+    @include default-padding;
+    background-image: linear-gradient($blue, $blue, $purple);
+    height: calc(100vh - 80px);
+
+    @include tablet{
+        height: calc(100vh - 100px);
+    }
+
+    @include desktop{
+        height: calc(100vh - 80px);
+    }
+
+    &__hero{
+
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 56px;
+        }
+    }
+
+    &__tagline{
+        width: 100%;
+        color: white;
+        font-size: $mobile-h1;
+
+        @include tablet{
+            font-size: 72px
+        }
+    }
+
+    &__button-filled{
+        @include button-filled;
+        margin-top: 24px;
+
+        @include tablet{
+            margin-top: 56px;
+        }
+    }
+}
