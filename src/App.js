@@ -1,17 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+//modules
+import { Switch, Route, Redirect } from "react-router-dom";
+
+//components
+import Home from "./pages/Home/Home";
+
+//files
+import "./App.scss";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Portfolio coming soon...
-        </p>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Switch>
+                <Redirect exact from="/" to="/home" />
+                <Route path="/home">
+                  <Home />
+                </Route>
+            </Switch>
+        </div>
+    );
 }
 
 export default App;
