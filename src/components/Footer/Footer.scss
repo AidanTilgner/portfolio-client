@@ -1,0 +1,32 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/typography' as *;
+@use '../../partials/variables' as *;
+
+.footer{
+    background-image: linear-gradient($honey-mustard, $purple);
+    height: 40vh;
+    @include default-padding;
+
+    &__title{
+        margin: 0;
+        color: white;
+        font-size: 36px;
+    }
+
+    &__social-icons{
+        margin-top: 24px;
+        margin-bottom: 56px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &__icon{
+        width: 30px;
+        margin-right: 36px;
+    }
+
+    &__copyright{
+        color: white;
+    }
+}

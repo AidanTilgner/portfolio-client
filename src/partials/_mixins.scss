@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+//viewports
 @mixin tablet{
     @media (min-width: 768px) {
         @content;
@@ -7,5 +10,107 @@
 @mixin desktop{
     @media (min-width: 1280px) {
         @content;
+    }
+}
+
+//padding
+@mixin default-padding{
+    padding-inline-start: 18px;
+    padding-inline-end: 18px;
+
+    @include tablet{
+        padding-inline-start: 30px;
+        padding-inline-end: 30px;
+    }
+
+    @include desktop{
+        padding-inline-start: 180px;
+        padding-inline-end: 180px;
+    }
+}
+
+//links
+@mixin link{
+    text-decoration: none;
+    color: white;
+}
+
+//styles
+@mixin button-filled{
+    font-family: "Ubuntu Mono";
+    height: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: #E4B958;
+    border: none;
+    width: 100%;
+
+    @include tablet{
+        width: 250px;
+    }
+
+    &:hover{
+        @keyframes button-filled{
+            from{
+                background-color: #E4B958;
+            }
+            to{
+                background-color: initial;
+                color:#FA6E6B;
+                border: 3px solid #FA6E6B;
+                font-size: 20px;
+            }
+        }
+
+        animation-name: button-filled;
+        animation-duration: .2s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+    }
+}
+
+@mixin button-outlined{
+    font-family: "Ubuntu Mono";
+    height: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #E4B958;
+    border: 3px solid #E4B958;
+    background-color: rgba(255, 255, 255, .0);
+    width: 100%;
+
+    @include tablet{
+        width: 250px;
+    }
+
+    &:hover{
+        @keyframes button-outlined{
+            from{
+                background-color: initial;
+            }
+            to{
+                background-color: #FA6E6B;
+                border: 3px solid #FA6E6B;
+                color: white;
+                font-size: 20px;
+            }
+        }
+
+        animation-name: button-outlined;
+        animation-duration: .2s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+        
+    }
+}
+
+@mixin subheader{
+    font-size: 36px;
+    color: white;
+    margin: 0;
+
+    @include tablet{
+        font-size: 64px;
     }
 }

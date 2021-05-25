@@ -1,5 +1,5 @@
 //modules
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 //components
@@ -12,8 +12,26 @@ function Navbar({ active }) {
 
     let [displayingMobileNav, setDisplayingMobileNav] = useState(false);
 
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if(window.pageYOffset > 0){
+                document.getElementById("navbar").style.boxShadow = "0px 0.2px 10px rgba(0, 0, 0, 0.25)"
+            }else{
+                document.getElementById("navbar").style.boxShadow = "none"
+            }
+        });
+
+        // returned function will be called on component unmount 
+        return () => {
+            window.removeEventListener('scroll', () => {})
+        }
+    }, [])
+
     return (
-        <nav className="navbar">
+        <nav 
+            className="navbar"
+            id="navbar"
+        >
             <h2 className="navbar__logo">Aidan Tilgner</h2>
             <MenuIcon 
                 className="navbar__menu-icon"
