@@ -40,7 +40,7 @@ function Home() {
                     here are some of my skills
                 </h2>
                 <div className="skills__skill-container">
-                    <a href="https://www.geeksforgeeks.org/mern-stack/" className="link">
+                    <a href="https://www.geeksforgeeks.org/mern-stack/" target="_blank" className="link">
                         <h3 className="skills__skill-name">
                             MERN Stack
                         </h3>
@@ -50,7 +50,7 @@ function Home() {
                     </p>
                 </div>
                 <div className="skills__skill-container">
-                    <a href="https://reactjs.org/" className="link">
+                    <a href="https://reactjs.org/" target="_blank" className="link">
                         <h3 className="skills__skill-name">
                             ReactJS
                         </h3>
@@ -60,7 +60,7 @@ function Home() {
                     </a>
                 </div>
                 <div className="skills__skill-container">
-                    <a href="https://nodejs.org/en/" className="link">
+                    <a href="https://nodejs.org/en/" target="_blank" className="link">
                         <h3 className="skills__skill-name">
                             NodeJS
                         </h3>
@@ -70,7 +70,7 @@ function Home() {
                     </p>
                 </div>
                 <div className="skills__skill-container">
-                    <a href="https://expressjs.com/" className="link">
+                    <a href="https://expressjs.com/" target="_blank" className="link">
                         <h3 className="skills__skill-name">
                             ExpressJS
                         </h3>
@@ -80,7 +80,7 @@ function Home() {
                     </p>
                 </div>
                 <div className="skills__skill-container">
-                    <a href="https://www.mongodb.com/" className="link">
+                    <a href="https://www.mongodb.com/" target="_blank" className="link">
                         <h3 className="skills__skill-name">
                             MongoDB
                         </h3>
