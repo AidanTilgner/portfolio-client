@@ -151,7 +151,7 @@ function Home() {
                 </h2>
                 <p className="about__description">
                     My name's Aidan. I'm a full-stack web developer based in Salem, Oregon.
-                    My whole life I've loved buildiing things and web development lets
+                    My whole life I've loved building things and web development lets
                     me do that. I also love working with people and making a difference in 
                     the world around me. This has lead me to pursue long lasting relationships, and engaging and 
                     staying up to date with political issues in the United States as well as the 
