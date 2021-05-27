@@ -301,6 +301,10 @@
     &__description{
         font-size: $mobile-p;
         color: white;
+
+        @include tablet{
+            font-size: $p;
+        }
     }
 
     &__button-filled{

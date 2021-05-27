@@ -20,7 +20,7 @@ function Resume() {
                 </h1>
                 <a href={resume} download="aidan-tilger-resume">
                     <button className="resume__button-filled">
-                        download pdf
+                        download resume
                     </button>
                 </a>
             </div>
