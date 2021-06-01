@@ -30,7 +30,7 @@ function ProjectShowcase({title, description, technologies, previewImage, projec
                 <p className="project-showcase__paragraph">
                     {technologies ? technologies : "technologies not listed"}
                 </p>
-                <a href={projectLink ? projectLink : "#"} className="project-showcase__link">
+                <a href={projectLink ? projectLink : "#"} className="project-showcase__link" target="_blank">
                     <button className="project-showcase__button-outlined">
                         {projectLink ? "view project" : "link not functional"}
                     </button>
