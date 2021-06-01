@@ -3,25 +3,18 @@
 @use '../../partials/variables' as *;
 
 .portfolioPage{
-    padding-block-start: 80px;
     @include default-padding;
-    background-image: linear-gradient($blue, $blue, $purple);
-    height: calc(100vh - 80px);
-
-    @include tablet{
-        height: calc(100vh - 80px);
-    }
-
-    @include desktop{
-        height: calc(100vh - 80px);
-    }
+    background-image: linear-gradient($blue, $purple, $pastel-pink, $honey-mustard);
+    padding-block-end: 56px;
 
     &__tagline{
         color: white;
         font-size: 48px;
+        padding: 96px 0;
 
         @include tablet{
             font-size: 72px;
+            padding: 124px 0;
         }
     }
 
