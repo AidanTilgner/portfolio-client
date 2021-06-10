@@ -7,7 +7,7 @@ import Footer from '../../components/Footer/Footer';
 
 //files
 import './Resume.scss';
-import resume from '../../assets/files/aidan-tilgner-resume';
+import resume from '../../assets/files/aidan-tilgner-resume.pdf';
 
 function Resume() {
     return (
