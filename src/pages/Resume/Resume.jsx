@@ -7,7 +7,7 @@ import Footer from '../../components/Footer/Footer';
 
 //files
 import './Resume.scss';
-import resume from '../../assets/files/resume.pdf';
+import resume from '../../assets/files/aidan-tilgner-resume';
 
 function Resume() {
     return (
@@ -18,7 +18,7 @@ function Resume() {
                     what I may lack in experience, I 
                     make up for in my drive to learn
                 </h1>
-                <a href={resume} download="aidan-tilger-resume">
+                <a href={resume} download="aidan-tilgner-resume">
                     <button className="resume__button-filled">
                         download resume
                     </button>
